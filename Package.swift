@@ -2,13 +2,35 @@
 import PackageDescription
 
 let package = Package(
-    name: "Protector",
-    platforms: [.iOS(.v15)],
+    name: "CodeAudit",
+    platforms: [
+        .macOS(.v15)
+    ],
     products: [
-        .library(name: "Protector", targets: ["Protector"])
+        .executable(name: "CodeAudit", targets: ["AppUI"]),
+    ],
+    dependencies: [
+        .package(url: "https://github.com/apple/swift-syntax.git", from: "0.50600.1"),
     ],
     targets: [
-        .target(name: "Protector", path: "Sources"),
-        .testTarget(name: "ProtectorTests", path: "Tests")
+        .target(
+            name: "ProjectScanner",
+            dependencies: [
+                .product(name: "SwiftSyntax", package: "swift-syntax")
+            ],
+            path: "Sources/ProjectScanner"
+        ),
+        .target(
+            name: "CodeParser",
+            dependencies: [
+                .product(name: "SwiftSyntax", package: "swift-syntax")
+            ],
+            path: "Sources/CodeParser"
+        ),
+        .target(
+            name: "AppUI",
+            dependencies: ["ProjectScanner", "CodeParser"],
+            path: "Sources/AppUI"
+        ),
     ]
 )
