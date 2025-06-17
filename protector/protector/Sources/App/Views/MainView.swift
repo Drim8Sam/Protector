@@ -1,4 +1,5 @@
 import SwiftUI
+import AppViewModels
 
 struct MainView: View {
     @StateObject private var viewModel = MainViewModel()

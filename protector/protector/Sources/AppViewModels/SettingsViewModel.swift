@@ -1,4 +1,5 @@
 import Foundation
+import AppModels
 
 /// ViewModel для экрана настроек
 @MainActor
