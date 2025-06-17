@@ -53,7 +53,9 @@ let package = Package(
         // Модуль правил
         .target(
             name: "RuleEngine",
-            dependencies: [],
+            dependencies: [
+                "AppModels"
+            ],
             path: "protector/Sources/RuleEngine"
         ),
 
