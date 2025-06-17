@@ -1,6 +1,6 @@
 import Foundation
-/*import CodeParser */        // ParsedFile
-/*import RuleEngine*/         // VulnerabilityRule, RuleEngine
+import CodeParser        // ParsedFile
+import RuleEngine        // VulnerabilityRule, RuleEngine
 
 /// Сервис проверки AST-дерева на уязвимости
 public final class RuleService {

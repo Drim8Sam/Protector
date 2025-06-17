@@ -1,5 +1,5 @@
 import Foundation
-//import ProjectScanner
+import ProjectScanner
 
 /// Сервис сканирования проекта на уровне файловой системы
 public final class ScanService {

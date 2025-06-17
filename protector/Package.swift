@@ -44,9 +44,39 @@ let package = Package(
             ],
             path: "protector/Sources/ResultAggregator"
         ),
+        .target(
+            name: "AppModels",
+            dependencies: [],
+            path: "protector/Sources/AppModels"
+        ),
+        .target(
+            name: "AppServices",
+            dependencies: [
+                "ProjectScanner",
+                "CodeParser",
+                "RuleEngine",
+                .product(name: "CodableCSV", package: "CodableCSV")
+            ],
+            path: "protector/Sources/AppServices"
+        ),
+        .target(
+            name: "AppViewModels",
+            dependencies: [
+                "AppModels",
+                "AppServices",
+                "ProjectScanner",
+                "CodeParser",
+                "RuleEngine",
+                .product(name: "CodableCSV", package: "CodableCSV")
+            ],
+            path: "protector/Sources/AppViewModels"
+        ),
         .executableTarget(
             name: "App",
             dependencies: [
+                "AppModels",
+                "AppServices",
+                "AppViewModels",
                 "ProjectScanner",
                 "CodeParser",
                 "RuleEngine",
