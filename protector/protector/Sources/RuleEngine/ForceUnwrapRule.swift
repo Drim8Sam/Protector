@@ -1,4 +1,5 @@
 import Foundation
+import CodeParser
 
 /// Правило детекции оператора force unwrap (!)
 public final class ForceUnwrapRule: VulnerabilityRule {

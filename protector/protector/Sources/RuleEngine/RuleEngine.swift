@@ -1,4 +1,5 @@
 import Foundation
+import CodeParser
 
 public final class RuleEngine {
     private let rules: [VulnerabilityRule] = [

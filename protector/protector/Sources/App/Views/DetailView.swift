@@ -1,8 +1,6 @@
 import SwiftUI
 import AppKit
-import UniformTypeIdentifiers
-import ProjectScanner
-import AppViewModels       // DetailViewModel
+import UniformTypeIdentifiers     // DetailViewModel
 
 struct DetailView: View {
     @StateObject private var vm = DetailViewModel()
