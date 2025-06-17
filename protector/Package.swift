@@ -23,26 +23,26 @@ let package = Package(
             dependencies: [
                 .product(name: "SwiftSyntax", package: "swift-syntax")
             ],
-            path: "Sources/ProjectScanner"
+            path: "protector/Sources/ProjectScanner"
         ),
         .target(
             name: "CodeParser",
             dependencies: [
                 .product(name: "SwiftSyntax", package: "swift-syntax")
             ],
-            path: "Sources/CodeParser"
+            path: "protector/Sources/CodeParser"
         ),
         .target(
             name: "RuleEngine",
             dependencies: [],
-            path: "Sources/RuleEngine"
+            path: "protector/Sources/RuleEngine"
         ),
         .target(
             name: "ResultAggregator",
             dependencies: [
                 .product(name: "CodableCSV", package: "CodableCSV")
             ],
-            path: "Sources/ResultAggregator"
+            path: "protector/Sources/ResultAggregator"
         ),
         .executableTarget(
             name: "App",
@@ -53,7 +53,7 @@ let package = Package(
                 "ResultAggregator",
                 .product(name: "Logging", package: "swift-log")
             ],
-            path: "Sources/App"
+            path: "protector/Sources/App"
         )
     ]
 )
