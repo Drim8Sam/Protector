@@ -1,7 +1,6 @@
-//
-//  HardcodedSecretRule.swift
-//  protector
-//
-//  Created by err on 17.06.2025.
-//
+import SwiftSyntax
 
+public final class HardcodedSecretRule: VulnerabilityRule {
+    public let id = "hardcoded_secret"
+    public func check(in file: ParsedFile) throws -> [Vulnerability] { /*…*/ }
+}

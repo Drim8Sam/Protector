@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		37D3C4432E01F57F009BC072 /* Logging in Frameworks */ = {isa = PBXBuildFile; productRef = 37D3C4422E01F57F009BC072 /* Logging */; };
+		37D3C4462E01F5A8009BC072 /* CodableCSV in Frameworks */ = {isa = PBXBuildFile; productRef = 37D3C4452E01F5A8009BC072 /* CodableCSV */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		372FF0A42DFAFFCB00259205 /* protector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = protector.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +28,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37D3C4462E01F5A8009BC072 /* CodableCSV in Frameworks */,
+				37D3C4432E01F57F009BC072 /* Logging in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +72,8 @@
 			);
 			name = protector;
 			packageProductDependencies = (
+				37D3C4422E01F57F009BC072 /* Logging */,
+				37D3C4452E01F5A8009BC072 /* CodableCSV */,
 			);
 			productName = protector;
 			productReference = 372FF0A42DFAFFCB00259205 /* protector.app */;
@@ -94,6 +103,11 @@
 			);
 			mainGroup = 372FF09B2DFAFFCA00259205;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				37D3C4412E01F57F009BC072 /* XCRemoteSwiftPackageReference "swift-log" */,
+				37D3C4442E01F5A8009BC072 /* XCRemoteSwiftPackageReference "CodableCSV" */,
+				37D3C4472E01F5C6009BC072 /* XCRemoteSwiftPackageReference "swift-syntax" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 372FF0A52DFAFFCB00259205 /* Products */;
 			projectDirPath = "";
@@ -321,6 +335,46 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		37D3C4412E01F57F009BC072 /* XCRemoteSwiftPackageReference "swift-log" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-log.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.6.3;
+			};
+		};
+		37D3C4442E01F5A8009BC072 /* XCRemoteSwiftPackageReference "CodableCSV" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dehesa/CodableCSV.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.6.7;
+			};
+		};
+		37D3C4472E01F5C6009BC072 /* XCRemoteSwiftPackageReference "swift-syntax" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-syntax.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 601.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		37D3C4422E01F57F009BC072 /* Logging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 37D3C4412E01F57F009BC072 /* XCRemoteSwiftPackageReference "swift-log" */;
+			productName = Logging;
+		};
+		37D3C4452E01F5A8009BC072 /* CodableCSV */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 37D3C4442E01F5A8009BC072 /* XCRemoteSwiftPackageReference "CodableCSV" */;
+			productName = CodableCSV;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 372FF09C2DFAFFCA00259205 /* Project object */;
 }

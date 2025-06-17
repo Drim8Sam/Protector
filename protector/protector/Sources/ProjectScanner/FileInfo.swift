@@ -1,7 +1,6 @@
-//
-//  FileInfo.swift
-//  protector
-//
-//  Created by err on 17.06.2025.
-//
+import Foundation
 
+public struct FileInfo {
+    public let path: String
+    public let content: String
+}

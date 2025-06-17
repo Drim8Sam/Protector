@@ -1,6 +1,6 @@
 import Foundation
 import CodableCSV         // пакет CodableCSV
-import RuleEngine         // Vulnerability
+//import RuleEngine         // Vulnerability
 
 /// Сервис сохранения отчёта в JSON и CSV
 public final class ReportService {
