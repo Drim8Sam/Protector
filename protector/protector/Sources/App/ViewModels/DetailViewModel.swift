@@ -1,9 +1,9 @@
 import Foundation
 import Combine
-import ProjectScanner     // FileInfo
-import CodeParser         // ParsedFile
-import RuleEngine         // Vulnerability
-import AppServices        // ParseService, RuleService, ReportService
+//import ProjectScanner     // FileInfo
+//import CodeParser         // ParsedFile
+//import RuleEngine         // Vulnerability
+//import AppServices        // ParseService, RuleService, ReportService
 
 @MainActor
 public final class DetailViewModel: ObservableObject {

@@ -1,6 +1,6 @@
 import Foundation
-import ProjectScanner      // FileInfo
-import CodeParser         // ParsedFile, ParserEngine
+/*import ProjectScanner  */    // FileInfo
+/*import CodeParser  */       // ParsedFile, ParserEngine
 
 /// Сервис парсинга — получает сырые FileInfo, выдаёт AST-представления
 public final class ParseService {
