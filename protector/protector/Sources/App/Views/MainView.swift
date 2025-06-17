@@ -4,7 +4,9 @@ struct MainView: View {
     @StateObject private var viewModel = MainViewModel()
 
     var body: some View {
-        VStack(spacing: 16) {
+        NavigationStack {
+            VStack(spacing: 16) {
+                NavigationLink(destination: DetailView(fileInfos: viewModel.lastFileInfos), isActive: $viewModel.shouldShowDetail) { EmptyView() }
             // Поисковая строка
             TextField("Поиск...", text: $viewModel.searchQuery)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
@@ -32,8 +34,9 @@ struct MainView: View {
             List(viewModel.filteredFileSummaries) { file in
                 Text(file.path)
             }
+            }
+            .frame(minWidth: 600, minHeight: 400)
         }
-        .frame(minWidth: 600, minHeight: 400)
     }
 }
 
