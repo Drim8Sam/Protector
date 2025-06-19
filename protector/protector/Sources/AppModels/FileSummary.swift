@@ -1,7 +1,11 @@
 import Foundation
 /// Упрощённая модель для отображения в UI
-struct FileSummary: Identifiable, Hashable {
-    let id = UUID()          // уникальный идентификатор для SwiftUI List
-    let path: String         // относительный путь к файлу внутри проекта
+public struct FileSummary: Identifiable, Hashable {
+    public let id = UUID()          // уникальный идентификатор для SwiftUI List
+    public let path: String         // относительный путь к файлу внутри проекта
+
+    public init(path: String) {
+        self.path = path
+    }
 }
 

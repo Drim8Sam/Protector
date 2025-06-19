@@ -8,13 +8,13 @@ import AppServices         // ScanService
 import CodableCSV
 
 @MainActor
-final class MainViewModel: ObservableObject {
-    @Published var searchQuery: String = ""
-    @Published var projectURL: URL?
-    @Published var fileSummaries: [FileSummary] = []
-    @Published var errorMessage: String?
-    @Published var shouldShowDetail: Bool = false
-    @Published var lastFileInfos: [FileInfo] = []
+public final class MainViewModel: ObservableObject {
+    @Published public var searchQuery: String = ""
+    @Published public var projectURL: URL?
+    @Published public var fileSummaries: [FileSummary] = []
+    @Published public var errorMessage: String?
+    @Published public var shouldShowDetail: Bool = false
+    @Published public var lastFileInfos: [FileInfo] = []
 
     private let scanService = ScanService()
 
@@ -25,7 +25,7 @@ final class MainViewModel: ObservableObject {
     }
 
     // Открыть NSOpenPanel для выбора директории
-    func chooseDirectory() {
+    public func chooseDirectory() {
         let panel = NSOpenPanel()
         panel.canChooseDirectories = true
         panel.canChooseFiles = false
@@ -51,7 +51,7 @@ final class MainViewModel: ObservableObject {
     }
 
     // Загрузка последнего сохранённого отчёта (если реализовано)
-    func loadLastReport() {
+    public func loadLastReport() {
         let panel = NSOpenPanel()
         panel.allowedContentTypes = [UTType.json, UTType.commaSeparatedText]
         panel.canChooseFiles = true
@@ -81,7 +81,7 @@ final class MainViewModel: ObservableObject {
     }
 
     // Запустить полный анализ (скан + парс + правила)
-    func runAnalysis() {
+    public func runAnalysis() {
         guard let url = projectURL else { return }
         Task {
             do {
