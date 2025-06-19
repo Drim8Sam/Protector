@@ -1,5 +1,5 @@
 import Foundation
-import RuleEngine
+// Uses Vulnerability model from the same module
 
 /// Логика агрегации массива уязвимостей в отчёт
 public struct ReportAggregator {

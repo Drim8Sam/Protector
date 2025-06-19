@@ -1,5 +1,5 @@
 import Foundation
-import CodeParser
+// Uses ParsedFile type from the same module
 
 /// Правило детекции оператора force unwrap (!)
 public final class ForceUnwrapRule: VulnerabilityRule {

@@ -1,7 +1,7 @@
 import Foundation
 import SwiftSyntax
 import SwiftParser
-import ProjectScanner
+// FileInfo is defined in the same module
 
 /// Обёртка над SwiftSyntax для разбора исходников
 public final class ParserEngine {

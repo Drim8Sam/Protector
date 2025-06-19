@@ -1,5 +1,5 @@
 import Foundation
-import CodeParser
+// Uses ParsedFile type from the same module
 
 public final class RuleEngine {
     private let rules: [VulnerabilityRule] = [
