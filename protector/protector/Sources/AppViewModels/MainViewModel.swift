@@ -40,10 +40,12 @@ public final class MainViewModel: ObservableObject {
         Task {
             do {
                 let infos = try scanService.scanProject(at: url)
-                // Преобразовать FileInfo в FileSummary для UI
-                self.fileSummaries = infos.map { FileSummary(path: $0.path) }
+                await MainActor.run {
+                    // Преобразовать FileInfo в FileSummary для UI
+                    self.fileSummaries = infos.map { FileSummary(path: $0.path) }
+                }
             } catch {
-                self.errorMessage = error.localizedDescription
+                await MainActor.run { self.errorMessage = error.localizedDescription }
             }
         }
     }
@@ -87,11 +89,13 @@ public final class MainViewModel: ObservableObject {
         Task {
             do {
                 let infos = try scanService.scanProject(at: url)
-                self.lastFileInfos = infos
-                self.fileSummaries = infos.map { FileSummary(path: $0.path) }
-                self.shouldShowDetail = true
+                await MainActor.run {
+                    self.lastFileInfos = infos
+                    self.fileSummaries = infos.map { FileSummary(path: $0.path) }
+                    self.shouldShowDetail = true
+                }
             } catch {
-                self.errorMessage = error.localizedDescription
+                await MainActor.run { self.errorMessage = error.localizedDescription }
             }
         }
     }
