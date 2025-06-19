@@ -2,9 +2,7 @@ import Foundation
 import Combine
 import AppKit
 import UniformTypeIdentifiers
-import AppModels           // FileSummary
-import ProjectScanner      // FileScanner, FileInfo
-import AppServices         // ScanService
+// FileSummary, FileScanner, FileInfo and ScanService are defined in the same module
 import CodableCSV
 
 @MainActor

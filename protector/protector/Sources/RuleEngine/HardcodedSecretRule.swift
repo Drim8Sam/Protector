@@ -1,6 +1,6 @@
 
 import Foundation
-import CodeParser
+// Uses ParsedFile type from the same module
 /// Поиск строковых литералов, похожих на пароли или токены
 public final class HardcodedSecretRule: VulnerabilityRule {
     public let id = "hardcoded_secret"

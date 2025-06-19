@@ -1,5 +1,5 @@
 import Foundation
-import ProjectScanner
+// FileScanner is defined in the same module
 
 /// Сервис сканирования проекта на уровне файловой системы
 public final class ScanService {

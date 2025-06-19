@@ -1,5 +1,5 @@
 import Foundation
-import AppModels
+// UserSettings model is defined in the same module
 
 /// ViewModel для экрана настроек
 @MainActor

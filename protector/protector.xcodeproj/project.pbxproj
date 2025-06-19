@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		370443A02E020562008705E5 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		372FF0A42DFAFFCB00259205 /* protector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = protector.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -33,7 +32,6 @@
 		3704439F2E020561008705E5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				370443A02E020562008705E5 /* Package.swift */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
