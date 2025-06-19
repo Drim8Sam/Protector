@@ -4,8 +4,11 @@ import Foundation
 public final class RuleEngine {
     private let rules: [VulnerabilityRule] = [
         ForceUnwrapRule(),
+        InsecureDataStorageRule(),
+        HTTPConnectionRule(),
+        WeakCryptoRule(),
         HardcodedSecretRule(),
-        // … другие правила
+        InputValidationRule()
     ]
 
     public func run(on file: ParsedFile) throws -> [Vulnerability] {
