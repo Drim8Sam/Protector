@@ -20,12 +20,14 @@ struct DetailView: View {
 
             HStack {
                 Button("Сохранить отчёт JSON") {
-                    let url = savePanelURL(suffix: "json")
-                    vm.saveJSON(to: url)
+                    if let url = savePanelURL(suffix: "json") {
+                        vm.saveJSON(to: url)
+                    }
                 }
                 Button("Сохранить CSV") {
-                    let url = savePanelURL(suffix: "csv")
-                    vm.saveCSV(to: url)
+                    if let url = savePanelURL(suffix: "csv") {
+                        vm.saveCSV(to: url)
+                    }
                 }
             }
             .padding()
@@ -33,11 +35,11 @@ struct DetailView: View {
         .frame(minWidth: 800, minHeight: 600)
     }
 
-    private func savePanelURL(suffix: String) -> URL {
+    private func savePanelURL(suffix: String) -> URL? {
         let panel = NSSavePanel()
         panel.allowedContentTypes = [UTType.json, UTType.commaSeparatedText]
         panel.nameFieldStringValue = "report.\(suffix)"
-        let _ = panel.runModal()
-        return panel.url!
+        let response = panel.runModal()
+        return response == .OK ? panel.url : nil
     }
 }
