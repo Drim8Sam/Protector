@@ -62,7 +62,10 @@ public final class MainViewModel: ObservableObject {
                 if url.pathExtension.lowercased() == "json" {
                     _ = try JSONDecoder().decode([Vulnerability].self, from: data)
                 } else {
-                    var reader = try CSVReader(string: String(decoding: data, as: UTF8.self), hasHeaderRow: true)
+                    var reader = try CSVReader(input: String(decoding: data, as: UTF8.self)) {
+                        $0.headerStrategy = .firstLine
+                    }
+
                     var vulns: [Vulnerability] = []
                     while let row = reader.next() {
                         if row.count >= 3, let line = Int(row[2]) {

@@ -4,7 +4,7 @@ import Foundation
 /// Поиск строковых литералов, похожих на пароли или токены
 public final class HardcodedSecretRule: VulnerabilityRule {
     public let id = "hardcoded_secret"
-    private let regex = try! NSRegularExpression(pattern: "(?i)(password|token|secret)\s*=\s*\"[^\"]*\"")
+    private let regex = try! NSRegularExpression(pattern: "(?i)(password|token|secret)\\s*=\\s*\\\"[^\"]*\\\"")
 
     public init() {}
 

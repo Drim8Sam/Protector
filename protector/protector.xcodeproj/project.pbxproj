@@ -6,6 +6,16 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		37E2D2D22E0453A90027452D /* SwiftBasicFormat in Frameworks */ = {isa = PBXBuildFile; productRef = 37E2D2D12E0453A90027452D /* SwiftBasicFormat */; };
+		37E2D2D42E0453A90027452D /* SwiftCompilerPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 37E2D2D32E0453A90027452D /* SwiftCompilerPlugin */; };
+		37E2D2D62E0453A90027452D /* SwiftDiagnostics in Frameworks */ = {isa = PBXBuildFile; productRef = 37E2D2D52E0453A90027452D /* SwiftDiagnostics */; };
+		37E2D2D82E0453A90027452D /* SwiftIDEUtils in Frameworks */ = {isa = PBXBuildFile; productRef = 37E2D2D72E0453A90027452D /* SwiftIDEUtils */; };
+		37E2D2DA2E0453A90027452D /* SwiftIfConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 37E2D2D92E0453A90027452D /* SwiftIfConfig */; };
+		37E2D2DD2E0453BF0027452D /* CodableCSV in Frameworks */ = {isa = PBXBuildFile; productRef = 37E2D2DC2E0453BF0027452D /* CodableCSV */; };
+		37E2D2E02E0453CE0027452D /* Logging in Frameworks */ = {isa = PBXBuildFile; productRef = 37E2D2DF2E0453CE0027452D /* Logging */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		372FF0A42DFAFFCB00259205 /* protector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = protector.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +33,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37E2D2D62E0453A90027452D /* SwiftDiagnostics in Frameworks */,
+				37E2D2D82E0453A90027452D /* SwiftIDEUtils in Frameworks */,
+				37E2D2E02E0453CE0027452D /* Logging in Frameworks */,
+				37E2D2DA2E0453A90027452D /* SwiftIfConfig in Frameworks */,
+				37E2D2D42E0453A90027452D /* SwiftCompilerPlugin in Frameworks */,
+				37E2D2DD2E0453BF0027452D /* CodableCSV in Frameworks */,
+				37E2D2D22E0453A90027452D /* SwiftBasicFormat in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +90,13 @@
 			);
 			name = protector;
 			packageProductDependencies = (
+				37E2D2D12E0453A90027452D /* SwiftBasicFormat */,
+				37E2D2D32E0453A90027452D /* SwiftCompilerPlugin */,
+				37E2D2D52E0453A90027452D /* SwiftDiagnostics */,
+				37E2D2D72E0453A90027452D /* SwiftIDEUtils */,
+				37E2D2D92E0453A90027452D /* SwiftIfConfig */,
+				37E2D2DC2E0453BF0027452D /* CodableCSV */,
+				37E2D2DF2E0453CE0027452D /* Logging */,
 			);
 			productName = protector;
 			productReference = 372FF0A42DFAFFCB00259205 /* protector.app */;
@@ -103,6 +127,9 @@
 			mainGroup = 372FF09B2DFAFFCA00259205;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
+				37E2D2D02E0453A90027452D /* XCRemoteSwiftPackageReference "swift-syntax" */,
+				37E2D2DB2E0453BF0027452D /* XCRemoteSwiftPackageReference "CodableCSV" */,
+				37E2D2DE2E0453CE0027452D /* XCRemoteSwiftPackageReference "swift-log" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 372FF0A52DFAFFCB00259205 /* Products */;
@@ -331,6 +358,71 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		37E2D2D02E0453A90027452D /* XCRemoteSwiftPackageReference "swift-syntax" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-syntax.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 601.0.1;
+			};
+		};
+		37E2D2DB2E0453BF0027452D /* XCRemoteSwiftPackageReference "CodableCSV" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dehesa/CodableCSV.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.6.7;
+			};
+		};
+		37E2D2DE2E0453CE0027452D /* XCRemoteSwiftPackageReference "swift-log" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-log.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.6.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		37E2D2D12E0453A90027452D /* SwiftBasicFormat */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 37E2D2D02E0453A90027452D /* XCRemoteSwiftPackageReference "swift-syntax" */;
+			productName = SwiftBasicFormat;
+		};
+		37E2D2D32E0453A90027452D /* SwiftCompilerPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 37E2D2D02E0453A90027452D /* XCRemoteSwiftPackageReference "swift-syntax" */;
+			productName = SwiftCompilerPlugin;
+		};
+		37E2D2D52E0453A90027452D /* SwiftDiagnostics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 37E2D2D02E0453A90027452D /* XCRemoteSwiftPackageReference "swift-syntax" */;
+			productName = SwiftDiagnostics;
+		};
+		37E2D2D72E0453A90027452D /* SwiftIDEUtils */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 37E2D2D02E0453A90027452D /* XCRemoteSwiftPackageReference "swift-syntax" */;
+			productName = SwiftIDEUtils;
+		};
+		37E2D2D92E0453A90027452D /* SwiftIfConfig */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 37E2D2D02E0453A90027452D /* XCRemoteSwiftPackageReference "swift-syntax" */;
+			productName = SwiftIfConfig;
+		};
+		37E2D2DC2E0453BF0027452D /* CodableCSV */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 37E2D2DB2E0453BF0027452D /* XCRemoteSwiftPackageReference "CodableCSV" */;
+			productName = CodableCSV;
+		};
+		37E2D2DF2E0453CE0027452D /* Logging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 37E2D2DE2E0453CE0027452D /* XCRemoteSwiftPackageReference "swift-log" */;
+			productName = Logging;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 372FF09C2DFAFFCA00259205 /* Project object */;
 }

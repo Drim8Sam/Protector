@@ -15,11 +15,12 @@ public final class ReportService {
 
     /// Сохраняет массив уязвимостей в CSV файл
     public func saveCSV(_ vulns: [Vulnerability], to url: URL) throws {
-        var writer = CSVWriter(stream: OutputStream(url: url, append: false)!)
+        var writer = try CSVWriter(fileURL: url, append: false)
+
         try writer.write(row: ["file", "type", "line"])
         for v in vulns {
             try writer.write(row: [v.file, v.type, String(v.line)])
         }
-        writer.stream.close()
+        try writer.endEncoding()
     }
 }

@@ -1,6 +1,6 @@
 import Foundation
 import SwiftSyntax
-import SwiftSyntaxParser
+
 
 /// Результат разбора исходного файла
 public struct ParsedFile: Identifiable {
