@@ -3,17 +3,17 @@ import AppModels
 
 /// ViewModel для экрана настроек
 @MainActor
-final class SettingsViewModel: ObservableObject {
-    @Published var settings = UserSettings()
+public final class SettingsViewModel: ObservableObject {
+    @Published public var settings = UserSettings()
 
     private let key = "user_settings"
 
-    init() {
+    public init() {
         load()
     }
 
     /// Загрузка настроек из UserDefaults
-    func load() {
+    public func load() {
         guard
             let data = UserDefaults.standard.data(forKey: key),
             let saved = try? JSONDecoder().decode(UserSettings.self, from: data)
@@ -22,7 +22,7 @@ final class SettingsViewModel: ObservableObject {
     }
 
     /// Сохранение текущих настроек
-    func save() {
+    public func save() {
         if let data = try? JSONEncoder().encode(settings) {
             UserDefaults.standard.set(data, forKey: key)
         }
